@@ -18,19 +18,3 @@ const formSchema = new mongoose.Schema({
 const Form = mongoose.model('Form', formSchema);
 
 module.exports = Form;
-
-//  const formSchema = new mongoose.Schema({
-//   document_name: String,
-//   doc_desc: String,
-//   questions: [{
-//     questionText: String,
-//     questionType: String,
-//     options: [{
-//       optionText: String,
-//     }],
-//     answer: String,
-//     points: Number,
-//     required: Boolean,
-//   }],
-//   createdAt: { type: Date, default: Date.now }
-// });
