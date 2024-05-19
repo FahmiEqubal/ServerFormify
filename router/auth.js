@@ -9,9 +9,13 @@ const User = require("../models/userSchema");
 
 require("../db/conn");
 
-router.use(cookieParser());
+// Create an instance of the Express application
+const app = express();
 
 // Middleware
+app.use(cookieParser());
+
+// Enable CORS for all routes
 app.use(cors({
   origin: 'https://eformify.netlify.app', // Set the allowed origin
   credentials: true // Allow credentials
