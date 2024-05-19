@@ -12,11 +12,11 @@ require("./db/conn");
 
 // Middleware
 app.use(cors({
-  origin: 'https://eformify.netlify.app',
-  credentials: true // Allow credentials
+  origin: 'https://eformify.netlify.app' // Set the allowed origin
 }));
 app.use(express.json());
 app.use(cookieParser());
+
 
 // Linking routers
 app.use(require("./router/auth"));
