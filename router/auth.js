@@ -10,6 +10,7 @@ const User = require("../models/userSchema");
 require("../db/conn");
 
 router.use(cookieParser());
+
 // Middleware
 app.use(cors({
   origin: 'https://eformify.netlify.app', // Set the allowed origin
