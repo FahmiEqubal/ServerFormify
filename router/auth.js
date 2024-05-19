@@ -10,7 +10,11 @@ const User = require("../models/userSchema");
 require("../db/conn");
 
 router.use(cookieParser());
-router.use(cors({ origin: "http://localhost:3000", credentials: true }));
+// Middleware
+app.use(cors({
+  origin: 'https://eformify.netlify.app', // Set the allowed origin
+  credentials: true // Allow credentials
+}));
 
 router.get("/", (req, res) => {
   res.send("Hello World!!");
